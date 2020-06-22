@@ -5,25 +5,73 @@ class ThreeDimen {
         this.width = width
         this.height = height
     }
+}
+
+class VolumeKubus extends ThreeDimen {
+    constructor(side) {
+        super(side)
+        this.side = side
+    }
 
     VKubus() {
         return this.side * this.side * this.side
+    }
+}
+
+class LuasKubus extends ThreeDimen {
+    constructor(side) {
+        super(side)
+        this.side = side
     }
 
     LKubus() {
         return 6 * (this.side * this.side)
     }
+}
+
+class KelilingKubus extends ThreeDimen {
+    constructor(side) {
+        super(side)
+        this.side = side
+    }
 
     KKubus() {
         return 12 * this.side
+    }
+}
+
+class VolumeBalok extends ThreeDimen {
+    constructor(long, width, height) {
+        super(long, width, height)
+        this.long = long
+        this.width = width
+        this.height = height
     }
 
     VBalok() {
         return this.long * this.width * this.height
     }
+}
+
+class LuasBalok extends ThreeDimen {
+    constructor(long, width, height) {
+        super(long, width, height)
+        this.long = long
+        this.width = width
+        this.height = height
+    }
 
     LBalok() {
         return 2 * (this.long + this.width + this.height)
+    }
+}
+
+class KelilingBalok extends ThreeDimen {
+    constructor(long, width, height) {
+        super(long, width, height)
+        this.long = long
+        this.width = width
+        this.height = height
     }
 
     KBalok() {
@@ -31,26 +79,26 @@ class ThreeDimen {
     }
 }
 
-const VolmeKubus = new ThreeDimen(10)
+const VolumeeKubus = new VolumeKubus(10)
 console.log('side * side * side    side = 10')
-console.log(VolmeKubus.VKubus())
+console.log(VolumeeKubus.VKubus())
 
-const LuasKubus = new ThreeDimen(10)
+const LuasKubuss = new LuasKubus(10)
 console.log('6 * (side * side)    side = 10')
-console.log(LuasKubus.LKubus())
+console.log(LuasKubuss.LKubus())
 
-const KelilingKubus = new ThreeDimen(10)
+const KelilinggKubus = new KelilingKubus(10)
 console.log('12 * side    side = 10')
-console.log(KelilingKubus.KKubus())
+console.log(KelilinggKubus.KKubus())
 
-const VolmeBalok = new ThreeDimen(0, 5, 6, 7)
+const VolmeBalok = new VolumeBalok(5, 6, 7)
 console.log('long * width * height    long = 5, width = 6, height = 7')
 console.log(VolmeBalok.VBalok())
 
-const LuasBalok = new ThreeDimen(0, 5, 6, 7)
+const LuassBalok = new LuasBalok(5, 6, 7)
 console.log('2 * (long + width + height)    long = 5, width = 6, height = 7')
-console.log(LuasBalok.LBalok())
+console.log(LuassBalok.LBalok())
 
-const KelilingBalok = new ThreeDimen(0, 5, 6, 7)
+const KelilinggBalok = new KelilingBalok(5, 6, 7)
 console.log('4 * (long + width + height)    long = 5, width = 6, height = 7')
-console.log(KelilingBalok.KBalok())
+console.log(KelilinggBalok.KBalok())
