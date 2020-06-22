@@ -62,7 +62,7 @@ class LuasBalok extends ThreeDimen {
     }
 
     LBalok() {
-        return 2 * (this.long + this.width + this.height)
+        return 2 * ((this.long * this.width) + (this.width * this.height) + (this.long * this.height))
     }
 }
 
@@ -96,7 +96,7 @@ console.log('long * width * height    long = 5, width = 6, height = 7')
 console.log(VolmeBalok.VBalok())
 
 const LuassBalok = new LuasBalok(5, 6, 7)
-console.log('2 * (long + width + height)    long = 5, width = 6, height = 7')
+console.log('2 * ((long * width) + (width * height) + (long * height)    long = 5, width = 6, height = 7')
 console.log(LuassBalok.LBalok())
 
 const KelilinggBalok = new KelilingBalok(5, 6, 7)
